@@ -8,5 +8,13 @@ var arrangeCoins = function(n, called = 0) {
         return 1 + arrangeCoins(n - called, called)
     }
 };
-
+#Iterative Solution
+var arrangeCoins = function(n) {
+    let row = 0; 
+    while(n > row){
+        row++;
+        n -= row;
+    }
+    return row;
+};
 
